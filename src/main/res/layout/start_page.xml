@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
+    app:circularflow_defaultRadius="20dp"
+    app:circularflow_radiusInDP="20dp"
+    tools:context=".MainActivity">
+
+<!--    rainbow-->
+<!--    pink-->
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_above="@+id/startPageTextWrapper"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rainbow_outer_outer_line"
+        >
+<!--        green-->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rainbow_outer_line"
+            >
+<!--            blue-->
+            <RelativeLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rainbow_middle_line"
+                >
+<!--                yellow-->
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rainbow_inner_line" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+<!--    text wrapper-->
+    <RelativeLayout
+        android:id="@+id/startPageTextWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gradient_main"
+        android:translationY="-50dp"
+        >
+        <TextView
+            android:id="@+id/startPageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:rotationY="-3"
+            android:text="The Weather Forecast"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            />
+
+    </RelativeLayout>
+
+<!--    loading indicator-->
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/startPageTextWrapper"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="15dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#E8FF00"
+        android:max="100"
+        android:visibility="visible" />
+</RelativeLayout>

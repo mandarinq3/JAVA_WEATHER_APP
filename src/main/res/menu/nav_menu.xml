@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="current"
+        android:icon="@drawable/baseline_cloud_24"
+        android:id="@+id/day"
+        />
+    <item
+        android:title="weekly"
+        android:icon="@drawable/baseline_calendar_today_24"
+        android:id="@+id/week"
+        />
+    <item   android:title="location"
+            android:icon="@drawable/baseline_location_on_24"
+            android:id="@+id/cities"
+        />
+</menu>
